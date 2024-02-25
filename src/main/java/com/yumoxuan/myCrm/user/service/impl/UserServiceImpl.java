@@ -6,6 +6,7 @@ import com.yumoxuan.myCrm.user.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -13,7 +14,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User queryUser(String id) {
-        return userMapper.selectById(id);
+    public List<User> queryUser(String id) {
+        return userMapper.queryUser();
     }
 }
