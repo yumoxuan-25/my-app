@@ -14,6 +14,13 @@ import java.util.List;
 public class UserController {
     @Resource
     private UserService userService;
+
+    /**
+     * test connect to mysql
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/queryUser")
     public List<User> queryUser(String id){
         return userService.queryUser(id);
