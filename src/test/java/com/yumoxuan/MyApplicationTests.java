@@ -1,4 +1,4 @@
-package com.yumoxuan.myCrm;
+package com.yumoxuan;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
