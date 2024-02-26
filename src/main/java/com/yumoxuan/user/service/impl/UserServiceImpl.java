@@ -1,8 +1,8 @@
-package com.yumoxuan.myCrm.user.service.impl;
+package com.yumoxuan.user.service.impl;
 
-import com.yumoxuan.myCrm.user.entity.User;
-import com.yumoxuan.myCrm.user.mapper.UserMapper;
-import com.yumoxuan.myCrm.user.service.UserService;
+import com.yumoxuan.user.entity.User;
+import com.yumoxuan.user.mapper.UserMapper;
+import com.yumoxuan.user.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,15 +1,15 @@
-package com.yumoxuan.myCrm;
+package com.yumoxuan;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.yumoxuan.myCrm.*.mapper")
+@MapperScan("com.yumoxuan.*.mapper")
 @SpringBootApplication
-public class MyCrmApplication {
+public class MyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MyCrmApplication.class, args);
+        SpringApplication.run(MyApplication.class, args);
     }
 
 }

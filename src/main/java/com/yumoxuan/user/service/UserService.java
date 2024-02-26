@@ -1,6 +1,6 @@
-package com.yumoxuan.myCrm.user.service;
+package com.yumoxuan.user.service;
 
-import com.yumoxuan.myCrm.user.entity.User;
+import com.yumoxuan.user.entity.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.yumoxuan.myCrm.user.entity;
+package com.yumoxuan.user.entity;
 
 import lombok.Data;
 

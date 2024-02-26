@@ -1,7 +1,7 @@
-package com.yumoxuan.myCrm.user.mapper;
+package com.yumoxuan.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yumoxuan.myCrm.user.entity.User;
+import com.yumoxuan.user.entity.User;
 
 import java.util.List;
 

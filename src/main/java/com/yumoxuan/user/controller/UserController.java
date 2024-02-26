@@ -1,7 +1,7 @@
-package com.yumoxuan.myCrm.user.controller;
+package com.yumoxuan.user.controller;
 
-import com.yumoxuan.myCrm.user.entity.User;
-import com.yumoxuan.myCrm.user.service.UserService;
+import com.yumoxuan.user.entity.User;
+import com.yumoxuan.user.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
