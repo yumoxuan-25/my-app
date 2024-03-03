@@ -1,0 +1,15 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8082
+
+#数据库连接
+spring:
+  datasource:
+    username: root
+    password: 662313
+    url: jdbc:mysql://127.0.0.1:3306/my_app
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+
