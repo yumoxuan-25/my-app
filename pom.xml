@@ -97,14 +97,14 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <!--①-->
+                <!--①移除全部配置文件-->
                 <excludes>
-                    <exclude>application*.properties</exclude>
+                    <exclude>application*.yml</exclude>
                 </excludes>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
-                <!--②-->
+                <!--②引入选中的配置文件-->
                 <filtering>true</filtering>
                 <includes>
                     <include>application.yml</include>
@@ -123,12 +123,6 @@
                 <!--profiles.active是自定义的字段（名字随便起），自定义字段可以有多个-->
                 <profiles.active>dev</profiles.active>
             </properties>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <profiles.active>prod</profiles.active>
-            </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -137,6 +131,12 @@
             <id>test</id>
             <properties>
                 <profiles.active>test</profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <profiles.active>prod</profiles.active>
             </properties>
         </profile>
     </profiles>
