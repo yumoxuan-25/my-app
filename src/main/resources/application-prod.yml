@@ -1,7 +1,8 @@
 # 应用服务 WEB 访问端口
 server:
   port: 8082
-
+  servlet:
+    context-path: /myApp
 #数据库连接
 spring:
   datasource:
@@ -9,7 +10,25 @@ spring:
     password: 662313
     url: jdbc:mysql://127.0.0.1:3306/my_app
     driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher #swagger3需要配置，因为springfox基于AntPathMatcher匹配路径
 
-
+#mybatis plus 设置
+mybatis-plus:
+  mapper-locations: classpath*:com/yumoxuan/**/xml/*Mapper.xml
+  global-config:
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      #主键类型
+      id-type: ASSIGN_ID
+      # 默认数据库表下划线命名
+      table-underline: true
+  configuration:
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 返回类型为Map,显示null对应的字段
+    call-setters-on-nulls: true
 
 

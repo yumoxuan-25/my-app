@@ -1,15 +1,30 @@
 package com.yumoxuan;
 
-import org.mybatis.spring.annotation.MapperScan;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.Environment;
 
-@MapperScan("com.yumoxuan.*.mapper")
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+@Slf4j
 @SpringBootApplication
 public class MyApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MyApplication.class, args);
+    public static void main(String[] args) throws UnknownHostException {
+        ConfigurableApplicationContext application = SpringApplication.run(MyApplication.class, args);
+        Environment env = application.getEnvironment();
+        String ip = InetAddress.getLocalHost().getHostAddress();
+        String port = env.getProperty("server.port");
+        String path = env.getProperty("server.servlet.context-path");
+        log.info("\n----------------------------------------------------------\n\t" +
+                "Application myApp is running! Access URLs:\n\t" +
+                "Local: \t\thttp://localhost:" + port + path + "/\n\t" +
+                "External: \thttp://" + ip + ":" + port + path + "/\n\t" +
+                "Swagger文档: \thttp://" + ip + ":" + port + path + "/swagger-ui/index.html\n" +
+                "----------------------------------------------------------");
     }
 
 }

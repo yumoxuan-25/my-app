@@ -44,9 +44,14 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3</version>
+            <version>3.4.1</version>
         </dependency>
-
+        <!--        swagger文档-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
 
 
 
@@ -81,7 +86,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.yumoxuan.MyApplication</mainClass>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
