@@ -1,7 +1,7 @@
-package com.yumoxuan.user.mapper;
+package com.yumoxuan.myapp.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yumoxuan.user.entity.User;
+import com.yumoxuan.myapp.user.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

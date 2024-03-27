@@ -1,7 +1,7 @@
-package com.yumoxuan.user.service;
+package com.yumoxuan.myapp.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yumoxuan.user.entity.User;
+import com.yumoxuan.myapp.user.entity.User;
 
 import java.util.List;
 

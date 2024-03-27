@@ -1,4 +1,4 @@
-package com.yumoxuan.common;
+package com.yumoxuan.myapp.common;
 
 import lombok.Data;
 

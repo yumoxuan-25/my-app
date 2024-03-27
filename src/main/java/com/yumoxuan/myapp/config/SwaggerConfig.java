@@ -1,4 +1,4 @@
-package com.yumoxuan.config;
+package com.yumoxuan.myapp.config;
 
 
 import org.springframework.beans.BeansException;
@@ -44,7 +44,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.OAS_30)
                 .apiInfo(apiInfo("myApp used Swagger3.0", "1.0"))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.yumoxuan"))
+                .apis(RequestHandlerSelectors.basePackage("com.yumoxuan.myapp"))
                 .paths(PathSelectors.any())
                 .build()
                 .groupName("api信息")

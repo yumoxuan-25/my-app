@@ -1,7 +1,7 @@
-package com.yumoxuan.user.controller;
+package com.yumoxuan.myapp.user.controller;
 
-import com.yumoxuan.user.entity.User;
-import com.yumoxuan.user.service.UserService;
+import com.yumoxuan.myapp.user.entity.User;
+import com.yumoxuan.myapp.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

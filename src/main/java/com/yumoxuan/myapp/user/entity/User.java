@@ -1,4 +1,4 @@
-package com.yumoxuan.user.entity;
+package com.yumoxuan.myapp.user.entity;
 
 import lombok.Data;
 

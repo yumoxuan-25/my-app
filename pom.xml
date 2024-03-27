@@ -85,7 +85,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.yumoxuan.MyApplication</mainClass>
+                    <mainClass>com.yumoxuan.myapp.MyApplication</mainClass>
                     <skip>false</skip>
                 </configuration>
                 <executions>
