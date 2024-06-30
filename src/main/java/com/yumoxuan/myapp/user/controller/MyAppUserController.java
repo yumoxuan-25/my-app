@@ -1,20 +1,20 @@
 package com.yumoxuan.myapp.user.controller;
 
-import java.util.Arrays;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import com.yumoxuan.myapp.common.Result;
+import com.yumoxuan.myapp.core.aspect.annotation.DistributedLock;
 import com.yumoxuan.myapp.user.entity.MyAppUser;
 import com.yumoxuan.myapp.user.service.IMyAppUserService;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 
- /**
+import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
+import java.util.Date;
+
+/**
  * @Description: my_app_user
  * @Author: jeecg-boot
  * @Date:   2024-04-10
@@ -55,8 +55,14 @@ public class MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-添加", notes="my_app_user-添加")
 	@PostMapping(value = "/add")
-	public Result<?> add(@RequestBody MyAppUser myAppUser) {
-		myAppUserService.save(myAppUser);
+	@DistributedLock(key = "user:add")
+	public Result<?> add(@RequestBody MyAppUser myAppUser, String userId) {
+		System.out.println(new Date());
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return Result.ok();
 	}
 
