@@ -90,6 +90,7 @@
     </dependencyManagement>
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -121,6 +122,12 @@
         </plugins>
 
         <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <!--①移除全部配置文件-->
