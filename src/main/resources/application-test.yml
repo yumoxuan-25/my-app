@@ -6,17 +6,30 @@ server:
 #数据库连接
 spring:
   datasource:
-    username: root
-    password: 662313
-    url: jdbc:mysql://127.0.0.1:3306/my_app
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      username: root
+      password: Java995646...
+      url: jdbc:mysql://localhost:3306/my_app?useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher #swagger3需要配置，因为springfox基于AntPathMatcher匹配路径
+  #reids配置
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    # redisson配置
+    redisson:
+      # 数据库编号
+      database: 1
+      # 节点地址
+      address: redis://localhost:6379
 
 #mybatis plus 设置
 mybatis-plus:
-  mapper-locations: classpath*:com/yumoxuan/**/xml/*Mapper.xml
+  mapper-locations: classpath*:com/yumoxuan/myapp/**/xml/*Mapper.xml
   global-config:
     # 关闭MP3.0自带的banner
     banner: false
@@ -30,4 +43,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 返回类型为Map,显示null对应的字段
     call-setters-on-nulls: true
+
+
+
 
