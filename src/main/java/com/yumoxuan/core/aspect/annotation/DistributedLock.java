@@ -1,4 +1,4 @@
-package com.yumoxuan.myapp.core.aspect.annotation;
+package com.yumoxuan.core.aspect.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

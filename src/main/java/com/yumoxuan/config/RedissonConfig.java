@@ -1,4 +1,4 @@
-package com.yumoxuan.myapp.config;
+package com.yumoxuan.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

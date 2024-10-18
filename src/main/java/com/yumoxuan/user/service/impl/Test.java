@@ -1,4 +1,4 @@
-package com.yumoxuan.myapp.user.service.impl;
+package com.yumoxuan.user.service.impl;
 
 import java.util.concurrent.ConcurrentHashMap;
 

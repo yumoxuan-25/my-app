@@ -1,6 +1,4 @@
-package com.yumoxuan.myapp.test;
-
-import org.springframework.format.annotation.DateTimeFormat;
+package com.yumoxuan.test;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

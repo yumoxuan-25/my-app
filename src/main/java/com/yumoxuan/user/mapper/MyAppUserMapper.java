@@ -1,9 +1,6 @@
-package com.yumoxuan.myapp.user.mapper;
+package com.yumoxuan.user.mapper;
 
-import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
-import com.yumoxuan.myapp.user.entity.MyAppUser;
+import com.yumoxuan.user.entity.MyAppUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

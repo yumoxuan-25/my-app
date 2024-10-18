@@ -1,6 +1,6 @@
-package com.yumoxuan.myapp.user.service;
+package com.yumoxuan.user.service;
 
-import com.yumoxuan.myapp.user.entity.MyAppUser;
+import com.yumoxuan.user.entity.MyAppUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

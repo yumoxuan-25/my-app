@@ -1,7 +1,7 @@
-package com.yumoxuan.myapp.core.aspect;
+package com.yumoxuan.core.aspect;
 
 
-import com.yumoxuan.myapp.core.aspect.annotation.DistributedLock;
+import com.yumoxuan.core.aspect.annotation.DistributedLock;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -23,7 +23,7 @@ public class DistributedLockAspect {
     @Resource
     public RedissonClient redissonClient;
 
-    @Pointcut("@annotation(com.yumoxuan.myapp.core.aspect.annotation.DistributedLock)")
+    @Pointcut("@annotation(com.yumoxuan.core.aspect.annotation.DistributedLock)")
     public void pointcut() {
 
     }

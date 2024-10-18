@@ -107,7 +107,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.yumoxuan.myapp.MyApplication</mainClass>
+                    <mainClass>com.yumoxuan.MyApplication</mainClass>
                     <skip>false</skip>
                 </configuration>
                 <executions>

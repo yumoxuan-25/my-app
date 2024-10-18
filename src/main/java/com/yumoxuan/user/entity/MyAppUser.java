@@ -1,4 +1,4 @@
-package com.yumoxuan.myapp.user.entity;
+package com.yumoxuan.user.entity;
 
 import java.io.Serializable;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -11,7 +11,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
 /**
  * @Description: my_app_user

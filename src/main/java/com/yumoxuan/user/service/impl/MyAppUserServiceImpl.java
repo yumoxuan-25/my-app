@@ -1,8 +1,8 @@
-package com.yumoxuan.myapp.user.service.impl;
+package com.yumoxuan.user.service.impl;
 
-import com.yumoxuan.myapp.user.entity.MyAppUser;
-import com.yumoxuan.myapp.user.mapper.MyAppUserMapper;
-import com.yumoxuan.myapp.user.service.IMyAppUserService;
+import com.yumoxuan.user.entity.MyAppUser;
+import com.yumoxuan.user.mapper.MyAppUserMapper;
+import com.yumoxuan.user.service.IMyAppUserService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
