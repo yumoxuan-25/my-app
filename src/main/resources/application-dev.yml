@@ -6,10 +6,12 @@ server:
 #数据库连接
 spring:
   datasource:
-    username: root
-    password: 662313
-    url: jdbc:mysql://localhost:3306/my_app?useSSL=false
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      username: root
+      password: 662313
+      url: jdbc:mysql://localhost:3306/my_app?useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher #swagger3需要配置，因为springfox基于AntPathMatcher匹配路径
