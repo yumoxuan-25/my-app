@@ -24,7 +24,7 @@ import java.util.Date;
 @RestController
 @RequestMapping("/myAppUser")
 @Slf4j
-public class MyAppUserController {
+public class  MyAppUserController {
 	@Autowired
 	private IMyAppUserService myAppUserService;
 
@@ -55,9 +55,9 @@ public class MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-添加", notes="my_app_user-添加")
 	@PostMapping(value = "/add")
-	@DistributedLock(key = "user:add")
+	@DistributedLock(name = "添加分布式锁",key = {"userId"})
 	public Result<?> add(@RequestBody MyAppUser myAppUser, String userId) {
-		System.out.println(new Date());
+		log.info(Thread.currentThread().getId()+" "+new Date());
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
