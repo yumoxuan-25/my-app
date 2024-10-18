@@ -26,7 +26,7 @@ public class Result<T> implements Serializable {
     private T data;
 
     public static <T> Result<T> ok() {
-        Result<T> res = new Result<>();
+        Result<T> res = new Result<T>();
         res.setCode(SUCCESS_CODE);
         res.setMessage("成功");
         return res;

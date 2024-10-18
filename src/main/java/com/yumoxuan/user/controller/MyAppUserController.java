@@ -1,6 +1,5 @@
 package com.yumoxuan.user.controller;
 
-import com.yumoxuan.common.Result;
 import com.yumoxuan.core.aspect.annotation.DistributedLock;
 import com.yumoxuan.user.entity.MyAppUser;
 import com.yumoxuan.user.service.IMyAppUserService;
@@ -39,12 +38,12 @@ public class  MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-分页列表查询", notes="my_app_user-分页列表查询")
 	@GetMapping(value = "/list")
-	public Result<?> queryPageList(MyAppUser myAppUser,
+	public String queryPageList(MyAppUser myAppUser,
 	                               @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
 	                               @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
 	                               HttpServletRequest req) {
 
-		return Result.ok();
+		return null;
 	}
 
 	/**
@@ -56,14 +55,14 @@ public class  MyAppUserController {
 	@ApiOperation(value="my_app_user-添加", notes="my_app_user-添加")
 	@PostMapping(value = "/add")
 	@DistributedLock(name = "添加分布式锁",key = {"userId"})
-	public Result<?> add(@RequestBody MyAppUser myAppUser, String userId) {
+	public String add(@RequestBody MyAppUser myAppUser, String userId) {
 		log.info(Thread.currentThread().getId()+" "+new Date());
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		return Result.ok();
+		return null;
 	}
 
 	/**
@@ -74,9 +73,9 @@ public class  MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-编辑", notes="my_app_user-编辑")
 	@PutMapping(value = "/edit")
-	public Result<?> edit(@RequestBody MyAppUser myAppUser) {
+	public String edit(@RequestBody MyAppUser myAppUser) {
 		myAppUserService.updateById(myAppUser);
-		return Result.ok();
+		return null;
 	}
 
 	/**
@@ -87,9 +86,9 @@ public class  MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-通过id删除", notes="my_app_user-通过id删除")
 	@DeleteMapping(value = "/delete")
-	public Result<?> delete(@RequestParam(name="id",required=true) String id) {
+	public String delete(@RequestParam(name="id",required=true) String id) {
 		myAppUserService.removeById(id);
-		return Result.ok();
+		return null;
 	}
 
 	/**
@@ -101,9 +100,9 @@ public class  MyAppUserController {
 
 	@ApiOperation(value="my_app_user-批量删除", notes="my_app_user-批量删除")
 	@DeleteMapping(value = "/deleteBatch")
-	public Result<?> deleteBatch(@RequestParam(name="ids",required=true) String ids) {
+	public String deleteBatch(@RequestParam(name="ids",required=true) String ids) {
 		this.myAppUserService.removeByIds(Arrays.asList(ids.split(",")));
-		return Result.ok();
+		return null;
 	}
 
 	/**
@@ -114,10 +113,10 @@ public class  MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-通过id查询", notes="my_app_user-通过id查询")
 	@GetMapping(value = "/queryById")
-	public Result<?> queryById(@RequestParam(name="id",required=true) String id) {
+	public String queryById(@RequestParam(name="id",required=true) String id) {
 		MyAppUser myAppUser = myAppUserService.getById(id);
 
-		return Result.ok();
+		return null;
 	}
 
 
