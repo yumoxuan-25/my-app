@@ -8,7 +8,7 @@ spring:
   datasource:
     username: root
     password: 662313
-    url: jdbc:mysql://124.221.111.254:3306/my_app?useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/my_app?useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
   mvc:
     pathmatch:
