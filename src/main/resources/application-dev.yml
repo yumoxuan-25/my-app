@@ -16,14 +16,14 @@ spring:
   #reids配置
   redis:
     database: 1
-    host: 124.221.111.254
+    host: 127.0.0.1
     port: 6379
     # redisson配置
     redisson:
       # 数据库编号
       database: 1
       # 节点地址
-      address: redis://124.221.111.254:6379
+      address: redis://127.0.0.1:6379
 
 #mybatis plus 设置
 mybatis-plus:
