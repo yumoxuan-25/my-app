@@ -1,5 +1,7 @@
 package com.yumoxuan.common;
 
+
+
 import lombok.Data;
 
 import java.io.Serializable;

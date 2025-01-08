@@ -1,6 +1,7 @@
 package com.yumoxuan.config;
 
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
@@ -44,7 +45,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.OAS_30)
                 .apiInfo(apiInfo("myApp used Swagger3.0", "1.0"))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.yumoxuan.myapp"))
+                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 .paths(PathSelectors.any())
                 .build()
                 .groupName("api信息")

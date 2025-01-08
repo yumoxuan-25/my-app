@@ -1,5 +1,6 @@
 package com.yumoxuan.user.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yumoxuan.core.aspect.annotation.DistributedLock;
 import com.yumoxuan.user.entity.MyAppUser;
 import com.yumoxuan.user.service.IMyAppUserService;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Description: my_app_user
@@ -38,12 +40,13 @@ public class  MyAppUserController {
 	 */
 	@ApiOperation(value="my_app_user-分页列表查询", notes="my_app_user-分页列表查询")
 	@GetMapping(value = "/list")
-	public String queryPageList(MyAppUser myAppUser,
+	public List<MyAppUser> queryPageList(MyAppUser myAppUser,
 	                               @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
 	                               @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
 	                               HttpServletRequest req) {
-
-		return null;
+		LambdaQueryWrapper<MyAppUser> queryWrapper=new LambdaQueryWrapper<>();
+		List<MyAppUser> list = myAppUserService.list(queryWrapper);
+		return list;
 	}
 
 	/**
