@@ -10,5 +10,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @Version: V1.0
  */
 public interface IMyAppUserService extends IService<MyAppUser> {
-
+	void testA();
+	void testB();
+	void testC();
 }

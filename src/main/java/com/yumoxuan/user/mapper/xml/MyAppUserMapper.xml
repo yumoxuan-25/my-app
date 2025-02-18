@@ -2,4 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yumoxuan.user.mapper.MyAppUserMapper">
 
+    <select id="queryList" resultType="com.yumoxuan.user.entity.MyAppUser">
+        SELECT * FROM my_app_user WHERE id='1876937303854977027' FOR UPDATE
+    </select>
 </mapper>

@@ -62,6 +62,7 @@ public class  MyAppUserController {
 		log.info(Thread.currentThread().getId()+" "+new Date());
 		try {
 			Thread.sleep(5000);
+			myAppUserService.save(myAppUser);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -122,5 +123,16 @@ public class  MyAppUserController {
 		return null;
 	}
 
-
+	@ApiOperation(value="测试事务扩散机制", notes="测试事务扩散机制")
+	@GetMapping(value = "/testTransaction")
+	public String testTransaction() {
+		myAppUserService.testA();
+		return "ok";
+	}
+	@ApiOperation(value="测试事务扩散机制", notes="测试事务扩散机制")
+	@GetMapping(value = "/testTransaction1")
+	public String testTransaction1() {
+		myAppUserService.testB();
+		return "ok";
+	}
 }

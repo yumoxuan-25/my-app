@@ -60,6 +60,8 @@ public class DistributedLockAspect {
             if (waitTime == -1) {
                 res = true;
                 lock.lock(expireTime, timeUnit);
+                lock.lock();
+                lock.tryLock();
             } else {
                 res = lock.tryLock(waitTime, expireTime, timeUnit);
             }
